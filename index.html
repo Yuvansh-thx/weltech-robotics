@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Weltech — Intelligence That Feels | Next-Gen Robotics & AI</title>
+  <meta name="description" content="Weltech merges human intuition with synthetic precision. Bridging the gap between humanity and robotics for a smarter, more connected future.">
+  <meta name="keywords" content="Weltech, robotics, artificial intelligence, precision engineering, bionics, autonomous systems">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Main Web Application -->
+  <main class="site-viewport" id="siteScrollContainer">
+
+    <!-- Navigation Header (Fixed at top of full web page) -->
+    <nav class="nav-bar" id="mainNav">
+      <div class="nav-left">
+        <!-- Logo -->
+        <a href="#hero" class="brand-logo" id="brandLogo" aria-label="Weltech Home">
+          <svg class="logo-mark" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 16L10 4H14L8 16H4Z" fill="#111318"/>
+            <path d="M12 16L18 4H22L16 16H12Z" fill="#111318"/>
+            <circle cx="26" cy="10" r="3.5" fill="#111318"/>
+          </svg>
+          <span class="brand-name">Weltech</span>
+        </a>
+
+        <!-- Menu pill toggle -->
+        <button class="pill-btn pill-menu" id="btnMenuToggle" aria-expanded="false" aria-controls="menuDrawer">
+          <span class="pill-dot"></span>
+          <span class="pill-text">Menu</span>
+        </button>
+
+        <!-- R&D and AI pill badges -->
+        <div class="nav-pills-group">
+          <button class="nav-pill-tag" data-tag="rnd">Cutting-edge R&amp;D</button>
+          <button class="nav-pill-tag" data-tag="ai">Adaptive AI</button>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <!-- Sound FX toggle button -->
+        <button class="sound-toggle-btn" id="btnSoundToggle" title="Toggle audio soundscape" aria-label="Toggle sound">
+          <svg class="icon sound-icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <svg class="icon sound-icon-off" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+          <span class="sound-label" id="soundLabel">Sound</span>
+        </button>
+
+        <button class="pill-btn pill-solutions" id="btnSolutionsModal">
+          <span class="pill-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <rect x="7" y="7" width="10" height="10" transform="rotate(45 12 12)"></rect>
+            </svg>
+          </span>
+          <span class="pill-text">Scalable Solutions</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- SECTION 1: HERO ("Intelligence that feels") -->
+    <section class="section section-hero" id="hero">
+        <div class="hero-center-typography">
+          <h1 class="hero-headline">
+            <span class="headline-brand">Weltech</span>
+            <span class="headline-tagline">
+              <span class="word-ghost">Intelligence</span>
+              <span class="word-bold">that feels</span>
+            </span>
+          </h1>
+        </div>
+
+        <!-- The Central Hands Touching Interaction (Michelangelo Contact) -->
+        <div class="hero-hands-stage" id="heroHandsStage">
+          <!-- Human Hand (Left) -->
+          <div class="hand-wrapper hand-left" id="humanHandWrapper">
+            <img src="assets/images/human_hand.png" alt="Human Hand reaching inward" class="hand-image hand-human" id="humanHandImg" loading="eager">
+          </div>
+
+          <!-- Micro Spark Touchpoint (Active when fingertips touch) -->
+          <div class="touch-spark-point" id="touchSparkPoint" aria-hidden="true">
+            <div class="touch-spark-core"></div>
+            <div class="touch-spark-glow"></div>
+            <div class="touch-spark-arc"></div>
+          </div>
+
+          <!-- Robot Hand (Right) -->
+          <div class="hand-wrapper hand-right" id="robotHandWrapper">
+            <img src="assets/images/robot_hand.png" alt="Robotic Cybernetic Hand reaching inward" class="hand-image hand-robot" id="robotHandImg" loading="eager">
+          </div>
+        </div>
+
+        <!-- Hero Bottom Info & Interactive Pills -->
+        <div class="hero-footer-bar">
+          <div class="hero-manifesto">
+            <span class="eyebrow-label">Precision Engineering</span>
+            <p class="manifesto-text">
+              Bridging the gap between humanity and robotics for a smarter, more connected future
+            </p>
+          </div>
+
+          <div class="hero-divider-line"></div>
+
+          <div class="hero-tags-cluster">
+            <button class="filter-pill active" data-category="algorithms">Algorithms</button>
+            <button class="filter-pill" data-category="ai">AI</button>
+            <button class="filter-pill" data-category="robotics">Robotics</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: THE QUANTUM / NEURAL TUNNEL -->
+      <section class="section section-tunnel" id="tunnel">
+        <div class="tunnel-media-container" id="tunnelMedia">
+          <!-- Authentic video loop background -->
+          <video class="tunnel-video" id="tunnelVideo" autoplay loop muted playsinline>
+            <source src="assets/videos/tunnel.mp4" type="video/mp4">
+          </video>
+          <!-- Interactive WebGL / Canvas warp particle overlay -->
+          <canvas class="tunnel-canvas" id="tunnelCanvas"></canvas>
+          <div class="tunnel-vignette"></div>
+        </div>
+
+        <div class="tunnel-content">
+          <!-- Morphing Central Title -->
+          <div class="tunnel-hero-text">
+            <div class="morph-word" id="morphWord">NEXT-GEN</div>
+          </div>
+
+          <!-- Bottom Right Mission Quote -->
+          <div class="tunnel-quote">
+            <p>
+              At Weltech, we believe in creating a world where machines don't just serve but <strong>truly connect with humans</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: KEY METRICS & INTERACTIVE SLIDERS -->
+      <section class="section section-metrics" id="metrics">
+        <div class="metrics-container">
+          <!-- Row 1: 97% Operational Efficiency -->
+          <div class="metric-row" id="metricRow1">
+            <div class="metric-data">
+              <div class="metric-value-wrap">
+                <span class="metric-number" id="metricVal1">97</span><span class="metric-unit">%</span>
+                <span class="metric-dot"></span>
+              </div>
+              <span class="metric-label">Operational efficiency</span>
+            </div>
+            <div class="metric-control">
+              <div class="slider-track" id="track1" data-id="1">
+                <div class="slider-fill fill-glow-neutral" id="fill1" style="width: 85%;"></div>
+                <div class="slider-thumb" id="thumb1" style="left: 85%;"></div>
+              </div>
+              <div class="metric-meta-tooltip" id="tooltip1">+38% over traditional automation</div>
+            </div>
+          </div>
+
+          <!-- Row 2: 12 K Collaborative Tasks -->
+          <div class="metric-row" id="metricRow2">
+            <div class="metric-data">
+              <div class="metric-value-wrap">
+                <span class="metric-number" id="metricVal2">12</span><span class="metric-unit"> K</span>
+                <span class="metric-dot dot-cyan"></span>
+              </div>
+              <span class="metric-label">Collaborative tasks</span>
+            </div>
+            <div class="metric-control">
+              <div class="slider-track" id="track2" data-id="2">
+                <div class="slider-fill fill-glow-cyan" id="fill2" style="width: 72%;"></div>
+                <div class="slider-thumb thumb-cyan" id="thumb2" style="left: 72%;"></div>
+              </div>
+              <div class="metric-meta-tooltip" id="tooltip2">Real-time neural fleet telemetry</div>
+            </div>
+          </div>
+
+          <!-- Row 3: 30+ Automotive Industries -->
+          <div class="metric-row" id="metricRow3">
+            <div class="metric-data">
+              <div class="metric-value-wrap">
+                <span class="metric-number" id="metricVal3">30</span><span class="metric-unit">+</span>
+                <span class="metric-dot dot-purple"></span>
+              </div>
+              <span class="metric-label">Automotive Industries</span>
+            </div>
+            <div class="metric-control">
+              <div class="slider-track" id="track3" data-id="3">
+                <div class="slider-fill fill-glow-purple" id="fill3" style="width: 60%;"></div>
+                <div class="slider-thumb thumb-purple" id="thumb3" style="left: 60%;"></div>
+              </div>
+              <div class="metric-meta-tooltip" id="tooltip3">Deployments across 14 global hubs</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: 3D CARD SHOWCASE ("Touching tomorrow, today") -->
+      <section class="section section-showcase" id="hardware">
+        <div class="showcase-header">
+          <span class="eyebrow-label">Precision Engineering</span>
+          <h2 class="showcase-title">
+            Touching tomorrow, <span class="word-ghost">today</span>
+          </h2>
+        </div>
+
+        <!-- 3D Perspective Fanned Cards Deck -->
+        <div class="fanned-deck-wrapper" id="fannedDeck">
+          <!-- Card 1: Bionic Hand & Wrist -->
+          <div class="deck-card card-pos-1" data-card="1" tabindex="0">
+            <div class="card-inner">
+              <img src="assets/images/card_1.jpg" alt="Weltech Bionic Hand Joint" class="card-img" loading="lazy">
+              <div class="card-overlay">
+                <span class="card-tag">BIONIC CORE</span>
+                <h3 class="card-name">Tactile Hand v4</h3>
+                <span class="card-spec">0.01s latency</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Neural Head & LiDAR -->
+          <div class="deck-card card-pos-2" data-card="2" tabindex="0">
+            <div class="card-inner">
+              <img src="assets/images/card_2.jpg" alt="Weltech LiDAR Neural Head" class="card-img" loading="lazy">
+              <div class="card-overlay">
+                <span class="card-tag">PERCEPTION</span>
+                <h3 class="card-name">Neural LiDAR Head</h3>
+                <span class="card-spec">Dual 8K Stereoscopic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Carbon-Fiber Actuator (Center Hero) -->
+          <div class="deck-card card-pos-3 active-center" data-card="3" tabindex="0">
+            <div class="card-inner">
+              <img src="assets/images/card_3.jpg" alt="Weltech Harmonic Drive Actuator" class="card-img" loading="lazy">
+              <div class="card-overlay">
+                <span class="card-tag">DRIVE SYSTEM</span>
+                <h3 class="card-name">Harmonic Piston</h3>
+                <span class="card-spec">1,200 N·m High-Torque</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Precision Rotary Bearing -->
+          <div class="deck-card card-pos-4" data-card="4" tabindex="0">
+            <div class="card-inner">
+              <img src="assets/images/card_4.jpg" alt="Weltech Precision Rotary Bearing" class="card-img" loading="lazy">
+              <div class="card-overlay">
+                <span class="card-tag">MECHANICS</span>
+                <h3 class="card-name">Zero-Backlash Joint</h3>
+                <span class="card-spec">Titanium Alloy Grade 5</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Cybernetic Modular Forearm -->
+          <div class="deck-card card-pos-5" data-card="5" tabindex="0">
+            <div class="card-inner">
+              <img src="assets/images/card_5.jpg" alt="Weltech Modular Forearm Articulation" class="card-img" loading="lazy">
+              <div class="card-overlay">
+                <span class="card-tag">KINEMATICS</span>
+                <h3 class="card-name">Modular Forearm</h3>
+                <span class="card-spec">7-DoF Articulation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile & Tablet Touch Navigation for Cards -->
+        <div class="deck-mobile-nav" id="deckMobileNav" aria-label="Component Navigation">
+          <button class="deck-nav-btn deck-prev" id="btnDeckPrev" aria-label="Previous hardware module">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <div class="deck-dots" id="deckDots">
+            <button class="deck-dot" data-idx="1" aria-label="Tactile Hand v4"></button>
+            <button class="deck-dot" data-idx="2" aria-label="Neural LiDAR Head"></button>
+            <button class="deck-dot active" data-idx="3" aria-label="Harmonic Piston"></button>
+            <button class="deck-dot" data-idx="4" aria-label="Zero-Backlash Joint"></button>
+            <button class="deck-dot" data-idx="5" aria-label="Modular Forearm"></button>
+          </div>
+          <button class="deck-nav-btn deck-next" id="btnDeckNext" aria-label="Next hardware module">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+
+        <!-- Ecosystem & Partner Logo Marquee -->
+        <div class="partners-marquee-wrap">
+          <div class="partners-track">
+            <div class="partner-logo"><span>1X</span></div>
+            <div class="partner-logo logo-fourier"><span>⚡ FOURIER</span></div>
+            <div class="partner-logo"><span>∴ mentee robotics</span></div>
+            <div class="partner-logo logo-bd"><span>BostonDynamics</span></div>
+            <div class="partner-logo"><span>FIGURE AI</span></div>
+            <div class="partner-logo"><span>AGILITY ROBOTICS</span></div>
+            <div class="partner-logo"><span>SANCTUARY COGNITIVE</span></div>
+            <!-- Duplicated for seamless infinite ticker -->
+            <div class="partner-logo"><span>1X</span></div>
+            <div class="partner-logo logo-fourier"><span>⚡ FOURIER</span></div>
+            <div class="partner-logo"><span>∴ mentee robotics</span></div>
+            <div class="partner-logo logo-bd"><span>BostonDynamics</span></div>
+            <div class="partner-logo"><span>FIGURE AI</span></div>
+            <div class="partner-logo"><span>AGILITY ROBOTICS</span></div>
+            <div class="partner-logo"><span>SANCTUARY COGNITIVE</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: "Where Human Intuition Meets Machine Intelligence" & FOOTER -->
+      <section class="section section-intuition" id="intuition">
+        <!-- Giant Kinetic Scroll Banner -->
+        <div class="kinetic-banner-wrap">
+          <div class="kinetic-banner-track" id="kineticTrack">
+            <span class="kinetic-item"><span class="word-ghost">Where Human</span> <strong class="word-solid">Intuition Meets</strong></span>
+            <span class="kinetic-item"><span class="word-ghost">Synthetic</span> <strong class="word-solid">Precision</strong></span>
+            <span class="kinetic-item"><span class="word-ghost">Where Human</span> <strong class="word-solid">Intuition Meets</strong></span>
+            <span class="kinetic-item"><span class="word-ghost">Synthetic</span> <strong class="word-solid">Precision</strong></span>
+          </div>
+        </div>
+
+        <!-- Narrative Statement & Action Badges -->
+        <div class="intuition-body">
+          <p class="intuition-statement">
+            Our technology is designed to merge the precision <strong>of robotics</strong> with the adaptability of artificial intelligence, unlocking endless possibilities in healthcare, manufacturing, and everyday life.
+          </p>
+
+          <div class="intuition-pills">
+            <button class="meta-pill" data-detail="impact">Proven Impact</button>
+            <button class="meta-pill active" data-detail="ui">UI &amp; Control</button>
+            <button class="meta-pill" data-detail="robotics">Robotics</button>
+            <button class="meta-pill" data-detail="neural">Neural Synthesis</button>
+          </div>
+        </div>
+
+        <!-- Footer Contact Bar -->
+        <footer class="site-footer">
+          <div class="footer-left">
+            <span class="telemetry-badge">
+              <span class="telemetry-pulse"></span>
+              Core System v2.4 Online · 1.2ms
+            </span>
+          </div>
+
+          <div class="footer-center">
+            <!-- Center Brand Glyph -->
+            <a href="#hero" class="footer-glyph" aria-label="Back to Top">
+              <svg viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 16L10 4H14L8 16H4Z" fill="#111318"/>
+                <path d="M12 16L18 4H22L16 16H12Z" fill="#111318"/>
+                <circle cx="26" cy="10" r="3.5" fill="#111318"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer-right">
+            <a href="mailto:contact@weltech.ai" class="footer-email-link" id="footerEmail">
+              <span class="email-text">contact@weltech.ai</span>
+              <span class="copy-badge" id="copyBadge">Copied!</span>
+            </a>
+          </div>
+        </footer>
+  </main>
+
+  <!-- POPUP / DRAWER 1: Navigation Menu Drawer -->
+  <aside class="menu-drawer" id="menuDrawer" aria-hidden="true">
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <div class="drawer-brand">
+          <span class="brand-name">Weltech Core</span>
+        </div>
+        <button class="drawer-close" id="btnMenuClose" aria-label="Close menu">&times;</button>
+      </div>
+
+      <nav class="drawer-nav">
+        <a href="#hero" class="drawer-link"><span class="link-num">01</span><span>Intelligence That Feels</span></a>
+        <a href="#tunnel" class="drawer-link"><span class="link-num">02</span><span>Next-Gen Neural Tunnel</span></a>
+        <a href="#metrics" class="drawer-link"><span class="link-num">03</span><span>Operational Telemetry</span></a>
+        <a href="#hardware" class="drawer-link"><span class="link-num">04</span><span>Hardware &amp; Ecosystem</span></a>
+        <a href="#intuition" class="drawer-link"><span class="link-num">05</span><span>Human-Synthetic Synthesis</span></a>
+      </nav>
+
+      <div class="drawer-footer">
+        <div class="drawer-tech-specs">
+          <div class="spec-item">
+            <span class="spec-label">ARCHITECTURE</span>
+            <span class="spec-val">Adaptive Neuromorphic</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">FLEET COVERAGE</span>
+            <span class="spec-val">12,480 Active Nodes</span>
+          </div>
+        </div>
+        <button class="drawer-cta" id="btnDrawerInquire">Deploy Weltech Platform</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- POPUP / MODAL 2: Scalable Solutions Configurator -->
+  <div class="modal-dialog" id="solutionsModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow-label">Enterprise Blueprint</span>
+          <h3 class="modal-title">Configure Scalable Solution</h3>
+        </div>
+        <button class="modal-close" id="btnModalClose">&times;</button>
+      </div>
+
+      <form class="configurator-form" id="configuratorForm" onsubmit="return false;">
+        <div class="form-group">
+          <label>Target Industry</label>
+          <div class="pill-selector" id="industrySelector">
+            <button type="button" class="form-pill active" data-val="Automotive">Automotive</button>
+            <button type="button" class="form-pill" data-val="Healthcare">Healthcare &amp; Surgery</button>
+            <button type="button" class="form-pill" data-val="Precision">Aerospace &amp; Precision</button>
+            <button type="button" class="form-pill" data-val="Logistics">Smart Logistics</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Fleet Scale Deployment: <strong id="fleetCountLabel">50 Units</strong></label>
+          <input type="range" min="10" max="500" value="50" step="5" class="modal-range" id="fleetRange">
+        </div>
+
+        <div class="estimate-card">
+          <div class="estimate-col">
+            <span class="est-label">ESTIMATED EFFICIENCY GAIN</span>
+            <span class="est-val" id="estGain">+42.8%</span>
+          </div>
+          <div class="estimate-col">
+            <span class="est-label">CYCLE TIME REDUCTION</span>
+            <span class="est-val" id="estCycle">-360ms</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputWorkEmail">Work Email</label>
+          <input type="email" id="inputWorkEmail" placeholder="cto@enterprise.com" class="modal-input" required>
+        </div>
+
+        <button type="submit" class="submit-cta" id="btnRequestBlueprint">Request Architecture Blueprint</button>
+        <p class="form-disclaimer">Zero-commitment consultation with Weltech Chief Robotics Engineers.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- POPUP / MODAL 3: Hardware Card Technical Spec Inspector -->
+  <div class="modal-dialog" id="cardModal" aria-hidden="true">
+    <div class="modal-backdrop" id="cardModalBackdrop"></div>
+    <div class="modal-window card-modal-window">
+      <button class="modal-close" id="btnCardModalClose">&times;</button>
+      <div class="card-modal-grid">
+        <div class="card-modal-media">
+          <img src="" alt="Hardware component" id="cardModalImg" class="modal-preview-img">
+        </div>
+        <div class="card-modal-info">
+          <span class="eyebrow-label" id="cardModalTag">BIONIC CORE</span>
+          <h3 class="modal-title" id="cardModalTitle">Tactile Hand v4</h3>
+          <p class="card-modal-desc" id="cardModalDesc">
+            High-density synthetic tactile arrays with 0.01s closed-loop neural reaction time. Engineered for sub-millimeter precision manipulation.
+          </p>
+          <div class="spec-table" id="cardModalSpecs">
+            <!-- Populated dynamically via JS -->
+          </div>
+          <button class="drawer-cta" id="btnOrderHardwareSample">Request Evaluation Unit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio elements & synthesized sound generator handled in script.js -->
+  <script src="script.js"></script>
+</body>
+</html>
